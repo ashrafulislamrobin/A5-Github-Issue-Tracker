@@ -36,7 +36,42 @@
     </style>
   </head>
   <body>
-    
+    <section class="bg-[#F8FAFC] flex justify-center items-center">
+      <div class="bg-white w-lg mx-auto text-center my-8 p-8 rounded-xl">
+        <img
+          src="./assets/github-logo.png"
+          alt="Github Logo"
+          class="mx-auto pb-5"
+        />
+        <h1 class="font-bold text-2xl">GitHub Issues Tracker</h1>
+        <p class="text-l pb-4">Sign in to manage your issues</p>
+
+        <fieldset class="fieldset">
+          <label class="label text-xl text-black">Username</label>
+          <input
+            type="text"
+            class="input w-full py-4 rounded-lg"
+            placeholder="Enter Username"
+            id="username"
+          />
+          <p class="text-[#4A00FF] text-start">Default: admin</p>
+
+          <label class="label text-xl text-black">Password</label>
+          <input
+            type="password"
+            class="input w-full py-4 rounded-lg"
+            placeholder="Enter Password"
+            id="password"
+          />
+          <p class="text-[#4A00FF] text-start">Default: admin123</p>
+          <button
+            onclick="loginSuccess()"
+            class="btn btn-primary mt-4 py-1 rounded-s-lg"
+          >
+            Sign In
+          </button>
+        </fieldset>
+
     <script src="./scripts/loginScript.js"></script>
   </body>
 </html>
