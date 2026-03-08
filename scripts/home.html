@@ -71,12 +71,75 @@
               placeholder="Search issues..."
             />
           </label>
- 
-           <button  class="btn btn-primary">+ New Issues</button>
+
+          <button class="btn btn-primary">+ New Issues</button>
         </div>
       </section>
     </header>
 
+    <main class="w-[80%] md:h-10/12 mx-auto py-14">
+      <!-- Tab-Btn-Section -->
+      <section
+        class="bg-white p-5 rounded-2xl space-x-3 flex flex-wrap justify-center md:justify-start items-center gap-y-3"
+      >
+        <button
+          onclick="
+            activeTab(event);
+            loadAllIssues();
+          "
+          class="btn active btn-tab btn-default btn-outline w-28"
+        >
+          All
+        </button>
+        <button
+          onclick="
+            activeTab(event);
+            loadDataForOpen();
+          "
+          class="btn btn-tab btn-outline btn-default w-28"
+        >
+          Open
+        </button>
+        <button
+          onclick="
+            activeTab(event);
+            loadDataForClosed();
+          "
+          class="btn btn-tab btn-outline btn-default w-28"
+        >
+          Closed
+        </button>
+      </section>
+
+      <section
+        class="bg-white p-5 rounded-t-2xl space-x-3 flex justify-between items-center mt-4 shadow-sm"
+      >
+        <div class="flex gap-2 items-center">
+          <div class="w-8 h-8">
+            <img src="./assets/Aperture.png" alt="" />
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl md:text-lg">
+              <span id="issue-counter" class="mr-2">0</span>Issues
+            </h3>
+            <p class="text-[#64748B]">Track and manage your project issues</p>
+          </div>
+        </div>
+        <div class="sm:flex gap-3">
+          <div class="flex items-center gap-2">
+            <div class="bg-[#00A96E] w-2 h-2 rounded-full"></div>
+            <span>Open</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="bg-[#A855F7] w-2 h-2 rounded-full"></div>
+            <span>Closed</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle"></dialog>
 
     <script src="./scripts/mainScript.js"></script>
   </body>
