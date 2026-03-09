@@ -173,7 +173,6 @@ const displayAllIssues = (issues) =>{
 //for showing labels
 
 const showLabel = (labels) =>{
-    
     const labelEl = labels.map(label => `<button class="${label === 'bug' ? 'bg-[#FEECEC]' : label === 'help wanted'? 'bg-[#FFF8DB]' : label === 'enhancement' ? 'bg-amber-200' : label === 'documentation' ? 'bg-purple-100' : 'bg-purple-50' } cursor-pointer border-1 border-[#FDE68A] text-[#D97706] text-sm px-2 py-1 rounded-full line-clamp-2">${label === 'bug' ? '<i class="fa-solid fa-bug"></i>' : label === 'help wanted'? '<i class="fa-solid fa-life-ring"></i>' : label === 'enhancement' ? '<i class="fa-solid fa-angles-up"></i>' : '<i class="fa-solid fa-face-grin-tongue"></i>'  } ${label}</button>`)
     return labelEl.join(" ")
 }
@@ -189,8 +188,6 @@ const dataForClosed = (issues)=>{
     const closedIssues = allissues.filter(item => item.status === 'closed')
     issueCount.innerText = closedIssues.length
     displayAllIssues(closedIssues)
-    
-    
 }
 
 const activeTab = (e) => {
